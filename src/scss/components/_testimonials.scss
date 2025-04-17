@@ -1,0 +1,57 @@
+.testimonials {
+  background: linear-gradient(rgba($color-black, 0.5), rgba($color-black, 0.5)), url("../assets/images/almeida_accent.jpg") center center/cover;
+
+  &__wrapper {
+    @include maxwidth;
+
+    &-inner {
+      @include padding(rem(60) rem(20));
+    }
+
+    .section-title {
+      @include margin(null null rem(40));
+      text-align: center;
+
+      h2 {
+        @extend %font-playfair-regular;
+        @include font-size(32, 40);
+        color: $color-white;
+  
+        @include mq($bp768) {
+          @include font-size(40, 50);
+        }
+      }
+    }
+
+    .description {
+      color: $color-white;
+      text-align: center;
+  
+      @include mq($bp1024) {
+        @include maxwidth(rem(970));
+      }
+  
+      p {
+        @extend %font-inter-medium;
+        @include font-size(18, 28);
+      }
+    }
+
+    .swiper {
+      &-pagination {
+        @include margin(rem(40) null null);
+        position: relative;
+
+        &-bullet {
+          background: $color-white;
+          opacity: 0.5;
+
+          &-active {
+            background: $color-white;
+            opacity: 1;
+          }   
+        }
+      }
+    }
+  }
+}

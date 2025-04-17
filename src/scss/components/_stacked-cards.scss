@@ -1,0 +1,114 @@
+.stacked-cards {
+  @include maxwidth(rem(1034));
+
+  &__wrapper {
+    @include padding(rem(60) rem(20));
+    position: relative;
+
+    @include mq($bp768) {
+      @include padding(rem(100) rem(32));
+    }
+  }
+
+  .section-title {
+    @include margin(null null rem(15));
+    text-align: center;
+
+    @include mq($bp1024) {
+      @include maxwidth(rem(760));
+      @include margin(null null rem(15));
+    }
+
+    h2 {
+      @extend %font-playfair-regular;
+      @include font-size(32, 40);
+
+      @include mq($bp768) {
+        @include font-size(40, 50);
+      }
+
+      span {
+        color: $color-blue;
+      }
+    }
+  }
+
+  .description {
+    text-align: center;
+
+    @include mq($bp1024) {
+      @include maxwidth(rem(970));
+    }
+
+    &.footer-description {
+      @include margin(rem(24) null null);
+      text-align: left;
+
+      @include mq($bp768) {
+        @include margin(rem(60) null null);
+      }
+
+      ul {
+        @include mq($bp768) {
+          columns: 2;
+        }
+
+        ::marker {
+          color: $color-blue;
+        }
+      }
+    }
+
+    p, ul {
+      @extend %font-inter-medium;
+      @include font-size(18, 28);
+    }
+  }
+
+  .link {
+    @include margin(rem(40) null null);
+    text-align: center;
+
+    a {
+      @include button;
+    }
+  }
+
+  .items {
+    @include margin(rem(40) null null);
+    display: grid;
+    gap: rem(20);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    @include mq($bp1024) {
+      column-gap: rem(40);
+    }
+
+    .item {
+      background-color: $color-white;
+      border: rem(1) solid $color-divider;
+      border-radius: rem(20);
+
+      .image {
+        img {
+          border-radius: rem(20);
+          height: 100%;
+        }
+      }
+
+      .cta-title {
+        @include margin(rem(10) null null);
+
+        h3 {
+          @extend %font-oswald-semibold;
+          @include font-size(15, 25);
+          text-transform: uppercase;
+
+          @include mq($bp768) {
+            @include font-size(20, 25);
+          }
+        }
+      }
+    }
+  }
+}

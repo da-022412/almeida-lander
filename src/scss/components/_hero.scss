@@ -1,0 +1,133 @@
+.hero {
+  background: linear-gradient(rgba($color-black, 0.5), rgba($color-black, 0.5)), url("../assets/images/almeida_hero.jpg") center center / cover;
+
+  &__wrapper {
+    @include maxwidth;
+
+    &-inner {
+      @include padding(rem(60) rem(20));
+
+      @include mq($bp768) {
+        @include padding(rem(100) rem(32));
+      }
+
+      @include mq($bp1024) {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__logo {
+    @include margin(null auto rem(30));
+    width: rem(150);
+
+    @include mq($bp1024) {
+      @include margin(null auto null 0);
+    }
+  }
+
+  &__text-wrapper {
+    @include margin(null null rem(20));
+
+    @include mq($bp1024) {
+      flex: 0 0 60%;
+    }
+
+    .page-title {
+      @include margin(null null rem(10));
+      text-align: center;
+
+      @include mq($bp768) {
+        @include margin(null null rem(20));
+      }
+
+      @include mq($bp1024) {
+        text-align: left;
+      }
+
+      h1 {
+        @extend %font-playfair-regular;
+        @include font-size(42, 52);
+        color: $color-white;
+      }
+    }
+
+    .section-title {
+      @include margin(rem(20) null);
+      text-align: center;
+
+      @include mq($bp768) {
+        @include margin(rem(40) null null);
+      }
+
+      @include mq($bp1024) {
+        text-align: left;
+      }
+
+      h2 {
+        @extend %font-oswald-semibold;
+        @include font-size(25, 32);
+        color: $color-white;
+        text-transform: uppercase;
+
+        @include mq($bp768) {
+          @include font-size(32, 32);
+        }
+      }
+    }
+
+    .link {
+      display: none;
+
+      @include mq($bp768) {
+        @include margin(rem(40) null null);
+        display: block;
+        text-align: center;
+      }
+
+      @include mq($bp1024) {
+        text-align: left;
+      }
+
+      a {
+        @include button;
+      }
+    }
+  }
+
+  .description {
+    text-align: center;
+
+    @include mq($bp1024) {
+      text-align: left;
+    }
+
+    &.hero-description {
+      display: none;
+
+      @include mq($bp1024) {
+        display: block;
+      }
+    }
+
+    &.footer-description {
+      @include margin(rem(20) null null);
+
+      @include mq($bp1024) {
+        display: none;
+      }
+    }
+
+    p {
+      @extend %font-inter-medium;
+      @include font-size(16, 28);
+      color: $color-white;
+
+      @include mq($bp768) {
+        @include font-size(18, 30);
+      }
+    }
+  }
+}
