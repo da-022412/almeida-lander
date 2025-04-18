@@ -104,22 +104,6 @@
       text-align: left;
     }
 
-    &.hero-description {
-      display: none;
-
-      @include mq($bp1024) {
-        display: block;
-      }
-    }
-
-    &.footer-description {
-      @include margin(rem(20) null null);
-
-      @include mq($bp1024) {
-        display: none;
-      }
-    }
-
     p {
       @extend %font-inter-medium;
       @include font-size(16, 28);
@@ -128,6 +112,24 @@
       @include mq($bp768) {
         @include font-size(18, 30);
       }
+    }
+  }
+
+  &--thank-you {
+    .hero__wrapper-inner {
+      @include padding(20vh null);
+
+      @include mq($bp1024) {
+        justify-content: center;
+      }
+    }
+
+    .page-title {
+      text-align: center;
+    }
+
+    .description {
+      text-align: center;
     }
   }
 }

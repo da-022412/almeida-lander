@@ -3,11 +3,11 @@
     @include maxwidth(rem(1034));
 
     &-inner {
-      @include padding(rem(60) rem(20));
+      @include padding(rem(60) rem(20) null);
       position: relative;
 
       @include mq($bp768) {
-        @include padding(rem(100) rem(32));
+        @include padding(rem(100) rem(32) null);
       }
     }
   }

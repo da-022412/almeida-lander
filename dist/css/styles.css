@@ -74,7 +74,7 @@ html {
   font-weight: 400;
 }
 
-.testimonials__wrapper .description p, .sticky-cta .icons .icon span, .horizontal-cta .description p, .stacked-cards .description p, .stacked-cards .description ul, .info-cards .description p, .hero .description p {
+.footer .description p, .testimonials__wrapper .description p, .sticky-cta .icons .icon span, .horizontal-cta .description p, .stacked-cards .description p, .stacked-cards .description ul, .info-cards .description p, .hero .description p {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -238,22 +238,6 @@ Components
     text-align: left;
   }
 }
-.hero .description.hero-description {
-  display: none;
-}
-@media screen and (min-width: 1025px) {
-  .hero .description.hero-description {
-    display: block;
-  }
-}
-.hero .description.footer-description {
-  margin-top: 1.25rem;
-}
-@media screen and (min-width: 1025px) {
-  .hero .description.footer-description {
-    display: none;
-  }
-}
 .hero .description p {
   font-size: 1rem;
   line-height: 1.75;
@@ -264,6 +248,21 @@ Components
     font-size: 1.125rem;
     line-height: 1.6667;
   }
+}
+.hero--thank-you .hero__wrapper-inner {
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+}
+@media screen and (min-width: 1025px) {
+  .hero--thank-you .hero__wrapper-inner {
+    justify-content: center;
+  }
+}
+.hero--thank-you .page-title {
+  text-align: center;
+}
+.hero--thank-you .description {
+  text-align: center;
 }
 
 .info-cards {
@@ -585,7 +584,6 @@ Components
 .horizontal-cta__wrapper-inner {
   padding-top: 3.75rem;
   padding-right: 1.25rem;
-  padding-bottom: 3.75rem;
   padding-left: 1.25rem;
   position: relative;
 }
@@ -593,7 +591,6 @@ Components
   .horizontal-cta__wrapper-inner {
     padding-top: 6.25rem;
     padding-right: 2rem;
-    padding-bottom: 6.25rem;
     padding-left: 2rem;
   }
 }
@@ -841,4 +838,36 @@ Components
 .testimonials__wrapper .swiper-pagination-bullet-active {
   background: #FFFFFF;
   opacity: 1;
+}
+
+.footer {
+  margin: 0 auto;
+  max-width: 56.25rem;
+}
+.footer__wrapper {
+  padding-right: 1.25rem;
+  padding-bottom: 3.75rem;
+  padding-left: 1.25rem;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .footer__wrapper {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+.footer .description p {
+  font-size: 0.75rem;
+  line-height: 1.3334;
+  color: #090705;
+}
+.footer .description p:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+.footer .description a {
+  color: #007bff;
+  text-decoration: none;
+}
+.footer .description a:hover {
+  text-decoration: underline;
 }

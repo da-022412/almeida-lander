@@ -1,0 +1,33 @@
+.footer{
+  @include maxwidth(rem(900));
+
+  &__wrapper {
+    @include padding(null rem(20) rem(60));
+    text-align: center;
+
+    @include mq($bp768) {
+      @include padding(null rem(32) null);
+    }
+  }
+
+  .description {
+    p {
+      @extend %font-inter-medium;
+      @include font-size(12, 16);
+      color: $color-black;
+
+      &:not(:last-child) {
+        @include margin(null null rem(10));
+      }
+    }
+
+    a {
+      color: $color-blue;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
