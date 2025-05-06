@@ -34,6 +34,13 @@
       p {
         @extend %font-inter-medium;
         @include font-size(18, 28);
+
+        span.author {
+          @extend %font-playfair-regular;
+          @include font-size(20, 28);
+          @include margin(rem(10) null null);
+          display: block;
+        }
       }
     }
 

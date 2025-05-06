@@ -68,7 +68,7 @@ html {
     margin-bottom: 170px;
   }
 }
-.testimonials__wrapper .section-title h2, .horizontal-cta .section-title h2, .stacked-cards .section-title h2, .info-cards .section-title h2, .hero__text-wrapper .page-title h1 {
+.testimonials__wrapper .description p span.author, .testimonials__wrapper .section-title h2, .horizontal-cta .section-title h2, .stacked-cards .section-title h2, .info-cards .section-title h2, .hero__text-wrapper .page-title h1 {
   font-family: "Playfair Display", serif;
   font-style: normal;
   font-weight: 400;
@@ -826,6 +826,12 @@ Components
 .testimonials__wrapper .description p {
   font-size: 1.125rem;
   line-height: 1.5556;
+}
+.testimonials__wrapper .description p span.author {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin-top: 0.625rem;
+  display: block;
 }
 .testimonials__wrapper .swiper-pagination {
   margin-top: 2.5rem;
